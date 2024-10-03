@@ -65,7 +65,7 @@ Set FontFamily "JetBrainsMono Nerd Font"
 Set FontSize 24
 Set Width 1920
 Set Height 1080
-Set Theme "DraculaPlus"
+Set Theme "Dracula"
 
 Sleep 1s
 
