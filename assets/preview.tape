@@ -62,9 +62,9 @@ Require sh
 
 Set Shell "bash"
 Set FontFamily "JetBrainsMono Nerd Font"
-Set FontSize 12
+Set FontSize 10
 Set Width 800
-Set Height 600
+Set Height 512
 Set Theme "nord"
 
 Sleep 1s
