@@ -65,7 +65,7 @@ Set FontFamily "JetBrainsMono Nerd Font"
 Set FontSize 24
 Set Width 1920
 Set Height 1080
-Set Theme "Catppuccin Mocha"
+Set Theme "DraculaPlus"
 
 Sleep 1s
 
