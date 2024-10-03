@@ -1,0 +1,40 @@
+name: Preview Generation
+
+on:
+  workflow_run:
+    workflows: ["linutil_build"]
+    types:
+      - completed
+
+jobs:
+  generate_preview:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: linutil-artifact
+          github-token: ${{ secrets.GH_PAT }}
+      
+      - name: List files
+        run: ls -la
+        
+      - name: Generate preview
+        uses: charmbracelet/vhs-action@v2.1.0
+        with:
+          path: "docs/assets/preview.tape"
+          install-fonts: "true"
+
+      - name: Move preview
+        run: |
+          mv preview.gif docs/assets/preview.gif
+
+      - name: Upload preview
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Preview for ${{ github.sha }}
+          file_pattern: "docs/assets/preview.gif"
+          add_options: "--force"
