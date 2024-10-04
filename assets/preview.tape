@@ -80,12 +80,11 @@ Down Sleep 500ms
 Right Sleep 1s
 
 Type "/" Sleep 1s
-Type@100ms "System Cleanup" Sleep 1s 
+Type@100ms "Rofi" Sleep 1s 
 Enter
 
 Sleep 500ms
 Enter Sleep 1s
-Type "y" Sleep 15s
-Type "y" Sleep 5s
+Type "y" Sleep 10s
 
 Enter
