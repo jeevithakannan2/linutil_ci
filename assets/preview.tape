@@ -70,7 +70,7 @@ Set Theme "nord"
 Type "linutil" Enter
 
 Left 
-Page
+Down
 Down 
 Down 
 Down 
