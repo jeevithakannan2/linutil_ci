@@ -86,5 +86,6 @@ Enter
 Sleep 500ms
 Enter Sleep 1s
 Type "y" Sleep 15s
+Type "y" Sleep 5s
 
-Escape
+Enter
