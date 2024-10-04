@@ -63,28 +63,25 @@ Require sh
 Set Shell "bash"
 Set FontFamily "JetBrainsMono Nerd Font"
 Set FontSize 20
-Set Width 1600
-Set Height 900
+Set Width 800
+Set Height 600
 Set Theme "nord"
 
-Sleep 1s
+Type "linutil" Enter
 
-Type "linutil" Sleep 1s  Enter
+Left 
+Page
+Down 
+Down 
+Down 
+Right
 
-Sleep 5s
+Type "/" 
+Type@200ms "System Cleanup"
+Enter
 
-Left Sleep 2s
-Down Sleep 1s
-Down Sleep 1s
-Down Sleep 1s
-Down Sleep 2s
-Right Sleep 3s
-
-Type "/" Sleep 1s
-Type@200ms "System Cleanup" Sleep 1s  Enter
-
-Sleep 2s
-Enter Sleep 3s
-Type "y" Sleep 15s    # CONFIRMATION PROMPT
+Enter
+Type "y"
+Sleep 15s
 
 Escape
