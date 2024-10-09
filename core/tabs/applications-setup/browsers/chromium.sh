@@ -14,7 +14,7 @@ if ! command_exists chromium; then
             ;;
     esac
 else
-    printf "%b\n" "${GREEN}Chromium Browser is already installed.${RC}"
+    echo -e "%b\n" "${GREEN}Chromium Browser is already installed.${RC}"
 fi
 }
 
