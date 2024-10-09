@@ -88,7 +88,7 @@ linkConfig() {
         fi
     fi
 
-    printf "%b\n" "${YELLOW}Linking new bash config file...${RC}"
+    echo -e "%b\n" "${YELLOW}Linking new bash config file...${RC}"
     ln -svf "$gitpath/.bashrc" "$HOME/.bashrc" || {
         printf "%b\n" "${RED}Failed to create symbolic link for .bashrc${RC}"
         exit 1
