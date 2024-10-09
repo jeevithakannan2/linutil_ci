@@ -43,6 +43,5 @@ jobs:
 
       - name: Check for bashisms
         run: |
-          for file in $FILES; do
-            checkbashisms "$file"
-          done
+          IFS=' ' read -r -a file_array <<< "$FILES"
+          checkbashisms "${file_array[@]}"
