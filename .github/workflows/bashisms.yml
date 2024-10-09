@@ -3,7 +3,7 @@ name: Check for bashisms
 on:
   pull_request:
     paths:
-      - core/tabs/**
+      - '**/*.sh'
   merge_group:
   workflow_dispatch:
 
@@ -18,7 +18,7 @@ jobs:
       - name: Get a list of changed script files
         id: get_sh_files
         run: |
-          sh_files=$(git diff --name-only origin/${{ github.base_ref }} HEAD core/tabs | grep '\.sh$' || true)
+          sh_files=$(git diff --name-only origin/${{ github.base_ref }} HEAD || true)
           if [ -n "$sh_files" ]; then
             echo "$sh_files" > changed_files
             echo "changed=1" >> $GITHUB_OUTPUT
