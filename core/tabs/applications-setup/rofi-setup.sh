@@ -20,7 +20,7 @@ installRofi() {
 
 setupRofiConfig() {
     printf "%b\n" "${YELLOW}Copying Rofi configuration files...${RC}"
-    if [ -d "$HOME/.config/rofi" ] && [ ! -d "$HOME/.config/rofi-bak" ]; then
+    if [[ -d "$HOME/.config/rofi" && ! -d "$HOME/.config/rofi-bak" ]]; then
         cp -r "$HOME/.config/rofi" "$HOME/.config/rofi-bak"
     fi
     mkdir -p "$HOME/.config/rofi"
